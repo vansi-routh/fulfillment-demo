@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Spectrum HH</title>
+  <title>Privacy Policy – Fulfillment Demo</title>
   <style>
     /* ─── Reset ──────────────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -161,7 +161,7 @@
 <header>
   <div class="page-wrapper">
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Spectrum HH &mdash; Store Associate Application</p>
+    <p class="subtitle">Fulfillment Demo &mdash; Store Associate Application</p>
     <span class="badge">Enterprise / MDM-Managed Device Application</span>
   </div>
 </header>
@@ -174,7 +174,7 @@
   <div class="meta-bar">
     <span><strong>Effective Date:</strong> March 16, 2025</span>
     <span><strong>Last Updated:</strong> March 16, 2025</span>
-    <span><strong>Application:</strong> Spectrum HH (<code>com.peapod.nextgen.shop</code>)</span>
+    <span><strong>Application:</strong> Fulfillment Demo (<code>com.adusa.demo.app</code>)</span>
     <span><strong>Platform:</strong> Android</span>
   </div>
 
@@ -182,17 +182,15 @@
   <div class="card">
     <h2><span class="icon">📋</span> 1. Overview</h2>
     <p>
-      <strong>Spectrum HH</strong> (hereinafter "the Application") is an enterprise-grade,
-      line-of-business Android application developed and operated by
-      <strong>Royal Ahold Delhaize</strong> and its affiliated brands (collectively
-      "the Company", "we", "us", or "our"). The Application is distributed exclusively
-      to store associates employed by or contracted with the Company.
+      <strong>Fulfillment Demo</strong> (hereinafter "the Application") is an enterprise-grade,
+      line-of-business Android application. The Application is distributed exclusively
+      to store associates employed by or contracted with the Company (collectively
+      "the Company", "we", "us", or "our").
     </p>
     <p>
       The Application is deployed exclusively on <strong>company-owned devices</strong>
       that are enrolled in and fully managed by a corporate Mobile Device Management
-      (MDM) solution — such as <em>Microsoft Intune</em> or <em>VMware Workspace ONE
-      (AirWatch)</em>. It is <strong>not</strong> available to the general public and is
+      (MDM) solution. It is <strong>not</strong> available to the general public and is
       not intended for installation on personal devices.
     </p>
     <p>
@@ -225,12 +223,9 @@
   <div class="card">
     <h2><span class="icon">🏢</span> 3. Data Controller</h2>
     <p>
-      The data controller for personal data processed through the Application is:
-    </p>
-    <p>
-      <strong>Royal Ahold Delhaize N.V.</strong><br />
-      Provincialeweg 11, 1506 MA Zaandam, The Netherlands<br />
-      For privacy enquiries: <a href="mailto:privacy@aholddelhaize.com">privacy@aholddelhaize.com</a>
+      The data controller for personal data processed through the Application is the
+      organisation that owns and deploys this Application. For privacy enquiries,
+      please contact your organisation's IT or Privacy team.
     </p>
   </div>
 
@@ -342,11 +337,11 @@
           <td>Storage</td>
           <td>
             On Android 11+ this all-files-access permission is required
-            by the Zebra EMDK and other hardware integration libraries to
-            read and write configuration files and firmware update packages
-            to locations outside the Application's sandboxed storage.
-            The Company's MDM policy grants this permission at the device
-            management layer.
+            by the enterprise hardware integration libraries to read and
+            write configuration files and firmware update packages to
+            locations outside the Application's sandboxed storage. This
+            permission is managed at the device level by the MDM solution
+            and is not used to access or collect personal data.
           </td>
           <td><span class="tag tag-required">Required</span></td>
         </tr>
@@ -410,10 +405,11 @@
           <td>System Overlay</td>
           <td>
             Enables the Application to display high-priority operational
-            alerts (e.g. urgent order notifications, MDM compliance
-            warnings) as system-level overlays, ensuring store associates
-            are notified even when the Application is in the background.
-            On MDM-managed devices this permission is granted by policy.
+            alerts (e.g. urgent order notifications, compliance warnings)
+            as system-level overlays, ensuring store associates are notified
+            even when the Application is in the background. This permission
+            is granted through the MDM solution and is used solely for
+            operational alerting purposes.
           </td>
           <td><span class="tag tag-required">Required</span></td>
         </tr>
@@ -542,28 +538,24 @@
     </p>
     <ul style="padding-left:1.25rem; margin-top:.5rem;">
       <li style="margin-bottom:.5rem;">
-        <strong>Royal Ahold Delhaize Group companies and affiliated banners</strong>
-        — for operational purposes (order management, inventory, workforce
-        planning).
-      </li>
-      <li style="margin-bottom:.5rem;">
         <strong>Google Firebase (Firebase Cloud Messaging)</strong> — solely for
         the delivery of push notifications. FCM tokens are used as routing
-        addresses; message content originates from Company servers. Google's
-        FCM service is governed by Google's
+        addresses; message content originates from the Company's own servers.
+        Google's FCM service is governed by Google's
         <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">
           Firebase Privacy and Security documentation</a>.
       </li>
       <li style="margin-bottom:.5rem;">
-        <strong>Zebra Technologies</strong> — device hardware integration
-        libraries (EMDK) are embedded in the Application. No personal data
-        is transmitted to Zebra servers by these libraries.
+        <strong>Enterprise Hardware Integration Libraries</strong> — embedded
+        libraries used for barcode scanner and peripheral device integration.
+        No personal data is transmitted to hardware vendor servers by these
+        libraries.
       </li>
       <li>
-        <strong>MDM Provider (Microsoft Intune / VMware AirWatch)</strong>
-        — the Company's MDM provider manages device enrolment, policy
-        enforcement, and Application deployment. The MDM provider may
-        process device metadata as described in its own privacy documentation.
+        <strong>MDM Provider</strong> — the Company's MDM provider manages
+        device enrolment, policy enforcement, and Application deployment. The
+        MDM provider may process device metadata as described in its own
+        privacy documentation.
       </li>
     </ul>
     <p style="margin-top:.85rem;">
@@ -579,20 +571,19 @@
       All data transmitted by the Application is protected using
       <strong>TLS 1.2 / TLS 1.3</strong> encryption. Data at rest on the
       device is protected by the Android Keystore system and the device's
-      full-disk or file-based encryption, which is enforced by MDM policy.
+      full-disk or file-based encryption, which is enforced by the MDM solution.
     </p>
     <p>
-      Application back-up is explicitly disabled
-      (<code>android:allowBackup="false"</code>) to prevent Application data
-      from being included in Android cloud backups. This ensures sensitive
-      operational data remains within Company-controlled infrastructure at
-      all times.
+      Application data backup to external or cloud storage is disabled to
+      prevent operational data from leaving Company-controlled infrastructure.
+      This ensures sensitive data remains within the Company's secure environment
+      at all times.
     </p>
     <p>
       Access to Company systems through the Application requires valid
       employee credentials managed by the Company's Identity &amp; Access
       Management (IAM) system. Multi-factor authentication (MFA) may be
-      enforced by the MDM conditional access policy.
+      enforced by the MDM solution's conditional access policy.
     </p>
   </div>
 
@@ -601,8 +592,7 @@
     <h2><span class="icon">📱</span> 8. Managed Device Context</h2>
     <p>
       All devices running the Application are corporate-owned and fully
-      managed under an MDM solution (Microsoft Intune or VMware Workspace
-      ONE / AirWatch). This means:
+      managed under a corporate MDM solution. This means:
     </p>
     <ul style="padding-left:1.25rem; margin-top:.5rem;">
       <li style="margin-bottom:.5rem;">
@@ -646,8 +636,7 @@
     </ul>
     <p style="margin-top:.85rem;">
       To exercise any of these rights, employees should contact their HR
-      department or submit a request to
-      <a href="mailto:privacy@aholddelhaize.com">privacy@aholddelhaize.com</a>.
+      department or the Company's designated privacy contact.
     </p>
   </div>
 
@@ -683,13 +672,8 @@
     <h2><span class="icon">📬</span> 12. Contact Us</h2>
     <p>
       For questions, concerns, or requests related to this Privacy Policy
-      or the data practices of the Application, please contact:
-    </p>
-    <p>
-      <strong>Data Privacy Team</strong><br />
-      Royal Ahold Delhaize N.V.<br />
-      Provincialeweg 11, 1506 MA Zaandam, The Netherlands<br />
-      Email: <a href="mailto:privacy@aholddelhaize.com">privacy@aholddelhaize.com</a>
+      or the data practices of the Application, please contact your
+      organisation's IT department or designated Privacy team.
     </p>
     <p>
       You may also contact the relevant Data Protection Authority (DPA) in
@@ -706,11 +690,7 @@
 <footer>
   <div class="page-wrapper">
     <p>
-      &copy; 2025 Royal Ahold Delhaize N.V. &mdash; All rights reserved.<br />
-      <a href="https://www.aholddelhaize.com/about/corporate-governance/privacy-statement/"
-         target="_blank" rel="noopener">Corporate Privacy Statement</a>
-      &nbsp;|&nbsp;
-      <a href="mailto:privacy@aholddelhaize.com">privacy@aholddelhaize.com</a>
+      &copy; 2025 Fulfillment Demo &mdash; All rights reserved.
     </p>
   </div>
 </footer>
